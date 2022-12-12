@@ -14,7 +14,6 @@ int main(){
     list<char>::iterator it;
 
     for(int i=0; i<numberOfPageRequests; i++){
-        cout<<"Page Request: "<<pageRequestSequence[i]<<" // ";
         it = find(frame.begin(), frame.end(), pageRequestSequence[i]);
 
         if(it == frame.end()){
@@ -28,12 +27,6 @@ int main(){
             frame.erase(it);
             frame.push_back(pageRequestSequence[i]);
         }
-
-        // cout<<"Frame: ";
-        // for(auto itr = frame.begin(); itr != frame.end(); itr++){
-        //     cout<<*itr<<" ";
-        // }
-        // cout<<endl;
     }
 
     cout<<"Number of page faults: "<<pageFaults<<endl;
