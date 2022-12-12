@@ -22,10 +22,6 @@ int main(){
             frame.push_back(pageRequestSequence[i]);
             pageFaults++;
         }
-        else{
-            frame.erase(it);
-            frame.push_back(pageRequestSequence[i]);
-        }
     }
 
     cout << "Number of page faults: " << pageFaults << endl;
@@ -33,5 +29,6 @@ int main(){
 
 }
 
-// 1303563 ,freame size = 3, page faults = 5
-// 70120304230323 ,freame size = 4, page faults = 6
+// 1303563 ,frame size = 3, page faults = 5
+// 70120304230323 ,frame size = 4, page faults = 6
+// 701203042303120
